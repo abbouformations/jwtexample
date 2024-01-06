@@ -19,16 +19,19 @@ public class TokenManager {
 
 	public static String generateToken(String username, Date dateCreation, Date dateExpiration) {
 
-//		return Jwts.builder().setSubject(username).setIssuedAt(dateCreation).setExpiration(dateExpiration)
-//				.signWith(SignatureAlgorithm.HS512, KEY).compact();
- 		String token = null;
+		return Jwts.builder().
+				setSubject(username).
+				setIssuedAt(dateCreation).
+				setExpiration(dateExpiration).
+				signWith(SignatureAlgorithm.HS512, KEY).compact();
+ /*		String token = null;
 		JwtBuilder builder = Jwts.builder();
 		builder.setSubject(username);
 		builder.setIssuedAt(dateCreation);
 		builder.setExpiration(dateExpiration);
 		builder.signWith(SignatureAlgorithm.HS512, KEY);
-		token = builder.compact();
-		return token;
+		token = builder.compact();*/
+		//return token;
 	}
 
 	public static String generateTokenwithRoles(Map<String, Object> credentials, Date dateCreation,

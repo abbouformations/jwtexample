@@ -5,7 +5,6 @@ import java.util.Date;
 import ma.formations.jwt.TokenManager;
 
 public class Test1 {
-	//délai de validité du token est : un jour.
 	private final static long PERIOD_VALIDITY = 1 * 24 * 60 * 60 * 1000;
 	public static void main(String[] args) {
 		Date dateCreation = new Date();
